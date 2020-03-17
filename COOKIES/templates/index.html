@@ -1,0 +1,34 @@
+{#{% load staticfiles %}#}
+{#<html>#}
+{#<body>#}
+{#<table align="center" border="2">#}
+{#    <tr><th colspan="3">online mobile sales</th></tr>#}
+{#    <tr><th><a href="{% url 'view' %}">cart items{{ data }}</a></th></tr>#}
+{#    <tr><th><img src="{% static 'image/black mobile.jpeg' %}" width="100" height="100"></th>#}
+{#        <th><img src="{% static 'image/black bag.jpeg' %}" width="100" height="100"></th>#}
+{#        <th><img src="{% static 'image/laptop.png' %}" width="100" height="100"></th>#}
+{#    </tr>#}
+{#    <tr><th>12000</th><th>1500</th><th>48000</th></tr>#}
+{#    <tr><th><a href="{% url 'cart' %}?no=101&name=mobile">add to cart</a></th>#}
+{#        <th><a href="{% url 'cart' %}?no=102&name=bag">add to cart</a></th>#}
+{#        <th><a href="{% url 'cart' %}?no=103&name=laptop">add to cart</a></th>#}
+{#    </tr>#}
+{#</table>#}
+{#</body>#}
+{#</html>#}
+{% load staticfiles %}
+<html>
+<body>
+<table align="center" border="2">
+    <tr><th colspan="3">online mobile sales</th></tr>
+    <tr><th colspan="3"><a href="{% url 'view' %}">cart items{{ data }}</a> </th></tr>
+    <tr><th><img src="{% static 'image/black mobile.jpeg'%}" width="100" height="100"></th>
+    <th><img src="{% static 'image/black bag.jpeg'%}" width="100" height="100"></th>
+    <th><img src="{% static 'image/laptop.png'%}" width="100" height="100"></th></tr>
+    <tr><th>12000</th><th>15000</th><th>42000</th></tr>
+    <tr><th><a href="{% url 'cart' %}?no=101&name=mobile">add to cart</a></th>
+        <th><a href="{% url 'cart' %}?no=102&name=bag">add to cart</a></th>
+        <th><a href="{% url 'cart' %}?no=103&name=laptop">add to cart</a></th></tr>
+</table>
+</body>
+</html>

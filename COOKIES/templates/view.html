@@ -1,0 +1,25 @@
+{#<table align="center" border="2">#}
+{#    <tr><th>product id</th>#}
+{#    <th>product name</th>#}
+{#    <th>remove from the cart</th></tr>#}
+{##}
+{#    {% for k,v in request.COOKIES.items %}#}
+{#        <tr>#}
+{#        <th>{{ k }}</th>#}
+{#        <th>{{ v }}</th>#}
+{#        <th><a href="{% url 'delete' %}?no={{ k }}">yes</a></th>#}
+{#        </tr>#}
+{#    {% endfor %}#}
+{#</table>#}
+
+<table align="center" border="2">
+    <tr><th>product id</th>
+    <th>product name</th>
+    <th>remove from the cart</th></tr>
+
+    {% for k,v in request.COOKIES.items %}
+        <tr><th>{{ k }}</th>
+        <th>{{ v }}</th>
+        <th><a href="{% url 'delete' %}?no={{ k }}">yes</a> </th></tr>
+    {% endfor %}
+</table>
